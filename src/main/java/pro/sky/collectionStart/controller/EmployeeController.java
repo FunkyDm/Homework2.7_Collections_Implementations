@@ -12,7 +12,7 @@ import pro.sky.collectionStart.exceptions.EmployeeNotFoundExceptions;
 import pro.sky.collectionStart.exceptions.EmployeesStorageFullException;
 import pro.sky.collectionStart.service.EmployeeService;
 
-import java.util.List;
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/employee/")
@@ -57,7 +57,7 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<Employee> printAllEmployees() {
+    public Collection<Employee> printAllEmployees() {
         return employeeService.printAllEmployees();
     }
 

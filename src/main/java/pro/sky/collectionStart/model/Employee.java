@@ -18,6 +18,10 @@ public class Employee {
         return lastName;
     }
 
+    public String getFullName() {
+        return firstName + lastName;
+    }
+
     @Override
     public String toString() {
         return "Сотрудник: " + firstName + " " + lastName;
@@ -26,7 +30,7 @@ public class Employee {
     @Override
     public boolean equals(Object other) {
         if (this == other) return true;
-        if (this.getClass() != other.getClass() || other == null) return false;
+        if (other == null || this.getClass() != other.getClass()) return false;
         Employee employee = (Employee) other;
         return firstName.equals(employee.firstName) && lastName.equals(employee.lastName);
     }
